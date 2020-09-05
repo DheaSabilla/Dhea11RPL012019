@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:background="@mipmap/rendang"
+                    android:background="@mipmap/film"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <TextView
@@ -36,7 +36,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
-                    android:text="Rendang"
+                    android:text="Film"
                     android:textColor="#FFFFFF"
                     tools:targetApi="lollipop" />
 
@@ -63,15 +63,15 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:background="@mipmap/gudeg"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/gudeg" />
                 <TextView
                     style="@android:style/TextAppearance.Medium"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
-                    android:text="Product"
+                    android:text="Makanan"
                     android:textColor="#FFFFFF"
                     tools:targetApi="lollipop" />
 

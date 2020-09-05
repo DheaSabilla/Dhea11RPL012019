@@ -2,12 +2,14 @@ package com.example.dhea11rpl012019;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
 
 public class MainActivity extends AppCompatActivity {
     EditText txtusername;
@@ -35,12 +37,16 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Tidak boleh ada yang kosong", Toast.LENGTH_SHORT).show();
                 } else {
 
-                    if (txtusername.getText().toString().equals("Dhea")
-                            && txtpassword.getText().toString().equals("Sabilla")) {
+                    if (txtusername.getText().toString().equals("sanggana")
+                            && txtpassword.getText().toString().equals("0107")) {
                         Toast.makeText(MainActivity.this, "Login success", Toast.LENGTH_SHORT).show();
                         editor = pref.edit();
                         editor.putString("userid", txtusername.getText().toString());
                         editor.apply();
+                        Intent in = new Intent(MainActivity.this, MainMenu.class);
+                        in.putExtra("username", txtusername.getText().toString());
+                        startActivity(in);
+                        finish();
                     } else {
                         Toast.makeText(MainActivity.this, "Login gagal", Toast.LENGTH_SHORT).show();
                     }
