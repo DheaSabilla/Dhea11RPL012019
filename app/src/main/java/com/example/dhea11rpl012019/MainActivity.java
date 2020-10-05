@@ -23,33 +23,23 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        pref = getSharedPreferences("login", MODE_PRIVATE);
+        pref = getSharedPreferences("login",MODE_PRIVATE);
         txtusername = findViewById(R.id.et1);
         txtpassword = findViewById(R.id.et2);
         btnlogin = findViewById(R.id.btnLogin);
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                String et1key = txtusername.getText().toString();
-                String et2key = txtpassword.getText().toString();
-                if (txtusername.getText().toString().isEmpty() ||
-                        txtpassword.getText().toString().isEmpty()) {
-                    Toast.makeText(MainActivity.this, "Tidak boleh ada yang kosong", Toast.LENGTH_SHORT).show();
-                } else {
-
-                    if (txtusername.getText().toString().equals("sanggana")
-                            && txtpassword.getText().toString().equals("0107")) {
-                        Toast.makeText(MainActivity.this, "Login success", Toast.LENGTH_SHORT).show();
-                        editor = pref.edit();
-                        editor.putString("userid", txtusername.getText().toString());
-                        editor.apply();
-                        Intent in = new Intent(MainActivity.this, MainMenu.class);
-                        in.putExtra("username", txtusername.getText().toString());
-                        startActivity(in);
-                        finish();
-                    } else {
-                        Toast.makeText(MainActivity.this, "Login gagal", Toast.LENGTH_SHORT).show();
-                    }
+            public void onClick(View view) {
+                if (txtusername.getText().toString().equalsIgnoreCase("dhea")
+                        && txtpassword.getText().toString().equalsIgnoreCase("sabilla")){
+                    //saving ke SP
+                    editor = pref.edit();
+                    editor.putString("username", txtusername.getText().toString());
+                    editor.putString("status", "login");
+                    editor.apply();
+                    //menuju ke main menu
+                    startActivity(new Intent(getApplicationContext(), MainMenu.class));
+                    finish();
                 }
             }
         });

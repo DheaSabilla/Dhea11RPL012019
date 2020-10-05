@@ -16,14 +16,19 @@ public class MainMenu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_menu);
         menu1 = (CardView) findViewById(R.id.menu1);
-        menu1.setOnClickListener(new View.OnClickListener()  {
+        menu1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),ListData.class));
-
+                startActivity(new Intent(getApplicationContext(), ListData.class));
             }
         });
         menu2 = (CardView) findViewById(R.id.menu2);
-        }
+        menu2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), ListDataFavourite.class));
+            }
+        });
     }
+}
 

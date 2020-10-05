@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@mipmap/walpaper"
     tools:context=".MainActivity">
 
     <androidx.cardview.widget.CardView
@@ -13,7 +14,6 @@
         android:layout_width="match_parent"
         android:layout_height="180dp"
         android:layout_margin="30dp"
-        android:layout_marginBottom="1dp"
         app:cardElevation="30dp"
         app:contentPadding="10dp">
 
@@ -28,6 +28,7 @@
 
                 <ImageView
                     android:background="@mipmap/film"
+                    android:padding="30dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <TextView

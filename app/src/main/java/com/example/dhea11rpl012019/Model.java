@@ -1,13 +1,22 @@
 package com.example.dhea11rpl012019;
 
 public class Model {
-    //https://image.tmdb.org/t/p/w500/uOw5JD8IlD546feZ6oxbIjvN66P.jpg
+    //"https://image.tmdb.org/t/p/w500/k68nPLbIST6NP96JmTxmZijEvCA.jpg"
     String original_title;
     String release_date;
     String poster_path;
     Boolean adult;
     String overview;
     int vote_count;
+    int id;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getOriginal_title() {
         return original_title;
