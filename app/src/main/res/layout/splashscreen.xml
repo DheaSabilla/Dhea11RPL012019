@@ -8,6 +8,7 @@
     android:orientation="vertical"
     android:background="@mipmap/walpaper">
 
+
     <TextView
         android:layout_width="300dp"
         android:layout_height="wrap_content"

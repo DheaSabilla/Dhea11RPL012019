@@ -27,23 +27,15 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
+                    android:layout_width="333dp"
+                    android:layout_height="158dp"
                     android:background="@mipmap/film"
-                    android:padding="30dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    android:id="@+id/articleName"
-                    style="@android:style/TextAppearance.Medium"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:text="Film"
-                    android:textColor="#FFFFFF"
-                    tools:targetApi="lollipop" />
+                    android:padding="40dp" />
 
             </RelativeLayout>
 
         </LinearLayout>
+
 
     </androidx.cardview.widget.CardView>
 
@@ -60,21 +52,14 @@
             android:orientation="vertical">
 
             <RelativeLayout
-                android:layout_width="match_parent"
+                android:layout_width="349dp"
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@mipmap/gudeg" />
-                <TextView
-                    style="@android:style/TextAppearance.Medium"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:text="Makanan"
-                    android:textColor="#FFFFFF"
-                    tools:targetApi="lollipop" />
+                    android:layout_width="320dp"
+                    android:layout_height="match_parent"
+                    android:background="@mipmap/favorite"
+                    android:padding="40dp" />
 
             </RelativeLayout>
 

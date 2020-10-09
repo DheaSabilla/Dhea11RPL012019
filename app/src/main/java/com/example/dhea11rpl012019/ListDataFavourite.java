@@ -46,7 +46,7 @@ public class ListDataFavourite extends AppCompatActivity {
         adapter = new DataAdapterFavourite(DataArrayList, new DataAdapterFavourite.Callback() {
             @Override
             public void onClick(int position) {
-
+                //intent ke detail movie
             }
 
             @Override
@@ -57,7 +57,6 @@ public class ListDataFavourite extends AppCompatActivity {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(ListDataFavourite.this);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
-
     }
 
 }
