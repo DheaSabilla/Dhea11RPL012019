@@ -6,25 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".SplashScreen"
     android:orientation="vertical"
-    android:background="@mipmap/walpaper">
+    android:background="@mipmap/splashscreen">
 
 
-    <TextView
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="280dp"
-        android:text="Welcome "
-        android:textColor="#000000"
-        android:textSize="50dp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="back"
-        android:textColor="#000000"
-        android:textSize="50dp"
-        android:textStyle="bold" />
 </LinearLayout>

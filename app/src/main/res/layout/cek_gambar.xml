@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/walpaper">
+    android:background="@mipmap/wa">
 
     <ImageView
         android:layout_gravity="center"

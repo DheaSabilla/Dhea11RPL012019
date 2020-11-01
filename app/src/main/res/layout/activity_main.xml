@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/login"
+    android:background="@mipmap/wa"
     tools:context=".MainActivity">
 
     <ImageView
@@ -27,25 +27,37 @@
     <EditText
         android:id="@+id/et1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginTop="30dp"
         android:hint="Username"
+        android:drawablePadding="20dp"
+        android:drawableLeft="@drawable/ic_person"
+        android:background="@drawable/tombol_bulat"
         android:textColor="#000000"/>
 
     <EditText
         android:id="@+id/et2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginTop="30dp"
+        android:background="@drawable/tombol_bulat"
+        android:drawableLeft="@drawable/ic_lock"
+        android:drawablePadding="20dp"
         android:hint="Password"
-        android:textColor="#000000"/>
+        android:textColor="#000000" />
 
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/tombol_bulat"
         android:hint="Login"
-        android:textStyle="bold"
-        android:textColor="#000000"/>
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+
 </LinearLayout>
