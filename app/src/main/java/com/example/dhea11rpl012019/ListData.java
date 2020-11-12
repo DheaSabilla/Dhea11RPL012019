@@ -23,18 +23,22 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.jar.JarException;
+import android.app.ProgressDialog;
 
 public class ListData extends AppCompatActivity {
-    private RecyclerView recyclerView;
-    private DataAdapter adapter;
-    private ArrayList <Model> DataArrayList; //kit add kan ke adapter
-    private ImageView tambah_data;
+    RecyclerView recyclerView;
+    DataAdapter adapter;
+    ArrayList <Model> DataArrayList; //kit add kan ke adapter
+    ImageView tambah_data;
+    ProgressDialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_data);
+        getSupportActionBar().hide();
         recyclerView = (RecyclerView) findViewById(R.id.rvdata);
+        dialog = new ProgressDialog(ListData.this);
         //addData();
         addDataonline();
     }
@@ -71,6 +75,11 @@ public class ListData extends AppCompatActivity {
     }
 
     void addDataonline() {
+
+        //kasih loading
+        dialog.setMessage("Sedang memproses data");
+        dialog.show();
+        // background process
         AndroidNetworking.get("https://api.themoviedb.org/3/movie/now_playing?api_key=a3d7f4985fd5dc6b21ae0245d5e5c324")
                 .setTag("test")
                 .setPriority(Priority.LOW)
@@ -126,8 +135,14 @@ public class ListData extends AppCompatActivity {
                             RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(ListData.this);
                             recyclerView.setLayoutManager(layoutManager);
                             recyclerView.setAdapter(adapter);
+                            if (dialog.isShowing()) {
+                                dialog.dismiss();
+                            }
                         } catch (JSONException e) {
                             e.printStackTrace();
+                            if (dialog.isShowing()) {
+                                dialog.dismiss();
+                            }
                         }
                     }
 

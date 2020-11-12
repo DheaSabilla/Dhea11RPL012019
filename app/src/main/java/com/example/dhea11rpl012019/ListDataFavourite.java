@@ -36,6 +36,7 @@ public class ListDataFavourite extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_data);
+        getSupportActionBar().hide();
         recyclerView = (RecyclerView) findViewById(R.id.rvdata);
         DataArrayList = new ArrayList<>();
         // Setup Realm

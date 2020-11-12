@@ -35,6 +35,7 @@ public class DetailFavorite extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_favorite);
+        getSupportActionBar().hide();
             extras = getIntent().getExtras();
             tvjudul = (TextView)findViewById(R.id.tvjudul);
             tvdesc = (TextView)findViewById(R.id.txtdeskripsi);

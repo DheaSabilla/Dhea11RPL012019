@@ -31,6 +31,8 @@ android {
 //library : networking, RV,
 //networking : FAN, practice nya silahkan add RV graddle
 dependencies {
+    //google
+    implementation 'com.google.android.gms:play-services-auth:18.1.0'
     apply plugin: 'realm-android'
     implementation 'com.squareup.picasso:picasso:2.71828'
     //glide
